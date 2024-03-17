@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+/>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="../JS/knowyourself.js"></script>
+    <script src="../JS/dailyselfcare.js"></script>
+  </head>
+  <body style="background-color: #fafafa" onload="dailySelfCareTimeInterval()">
+    <div style="background-color: #ffe0b2; padding: 25px">
+       
+      <h2>  <a href="../index.html">
+        <span ><img  src="../Images/home.png" width="30" height="30"></img></span>
+      </a> MANAS Codeathon 2023</h2>
+      <!-- <h6>CDAC Bangalore</h6> -->
+    </div>
+
+    <div class="container mt-5">
+      <div class="row d-flex justify-content-center">
+
+<div class="row">
+  <div class="col">
+<h6>Leaf Count: <span><p  id="leafcount"> </p></span> </h6>
+  </div>
+  <!-- <div class="col">
+vdsfvsdf
+  </div> -->
+</div>
+
+        <div class="card mt-3" style="width: 24rem; ">
+         
+          <div class="card-body" >
+            <h4>Your Morning Routines</h4>
+
+
+
+         
+
+
+            <div class="stepper">
+              <div class="step" >
+                <!-- <div class="step-icon"></div> -->
+                <div class="card" id="myI" data-bs-toggle="modal"  data-bs-target="#exampleModal" style="width: 18rem; background-color: #fff3e0;">
+             
+                  <div class="card-body" >
+                     <div class="step-title" value="1" >Daily Motivation  <span id="dailymotivation"></span>  </div>
+                  </div>
+                </div>
+                <!-- Daily Motivation Modal -->
+                <div class="modal fade"
+                
+                style=""
+                id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Today's Motivation</h5>
+                        <button type="button" onclick="dailyMotivationModal()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+
+
+                        <div class="card" style="width: auto;">
+                         
+                          <div class="card-body">
+                            <img src="../Images/today's_motivation.jpg"  height="200"
+                            widht="200"/>
+                          </div>
+                        </div>
+
+
+                     
+                      </div>
+                      <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+              <div class="step">
+                <!-- <div class="step-icon"></div> -->
+
+                <div class="card" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" style="width: 18rem; background-color: #fff3e0;">
+             
+                  <div class="card-body">
+                    <div class="step-title" value="2">Morning Exercises  <span id="morningexercise"></span></div>
+                 
+                  </div>
+                </div>
+               <!-- Morning Exercise Modal Start-->
+               <div class="modal fade"
+               style=""
+               id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Morning Exercise</h1> &nbsp  &nbsp<span>
+                         <select class="pl-3 form-select" aria-label="Default select example" >
+                        <option class="step-title" selected>Morning Exercises</option>
+                        <option class="step-title" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal" value="1">Yoga</option>
+                        <option class="step-title" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" value="2">Sport</option>
+                        <option class="step-title" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" value="3">Meditation</option>
+                      </select>
+                    </span>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="morningExerciseModal()" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                     <p>
+                      Benefits:
+                      <ul>
+                        
+<li>  Fewer distractions</li>
+<li>  Beat the heat </li>
+<li>  Healthier food choices</li>
+<li>  Increased alertness </li>
+<li>  More overall energy</li>
+
+                      </ul>
+                      
+                     
+                     
+                    
+                    
+                     </p>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade"
+              style=""
+              id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Yoga</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="morningExerciseModal()" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="../Images/Yoga.jpg"  height="200"
+                      widht="200"/>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to Preference</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade"
+              style=""
+              id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sports</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"  onclick="morningExerciseModal()" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="../Images/sports.jpg"  height="200"
+                            widht="200"/>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to Preference</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="modal fade"
+              style=""
+              id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Badminton</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="morningExerciseModal()" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="../Images/badminton.jpg"  height="200"
+                            widht="200"/>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to Preference</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button> -->
+ <!-- Morning Exercise Modal End-->
+              </div>
+              <div class="step">
+                <!-- <div class="step-icon"></div> -->
+                <div class="card" data-bs-toggle="modal"  data-bs-target="#exampleModal4" style="width: 18rem; background-color: #fff3e0;">
+             
+                  <div class="card-body">
+                    <div class="step-title" value="3">Today's Affirmation  <span id="todayaffirmation"></span></div>
+                  </div>
+                </div>
+              <!-- Today Affirmation start-->
+
+
+              <div class="modal fade"
+                
+              style=""
+              id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabe" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Today's Affirmation</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="todaysAffirmationModal()" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+
+                      <div class="card" style="width: auto;">
+                       
+                        <div class="card-body">
+                          <img src="../Images/todays-affirmation.jpg"  height="200"
+                          widht="200"/>
+                        </div>
+                      </div>
+
+
+                   
+                    </div>
+                    <div class="modal-footer">
+                      <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+ <!-- Today Affirmation end-->
+              </div>
+             
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-3" style="width: 24rem;">
+         
+          <div class="card-body">
+            <h4>Your Afternoon Routines</h4>
+            <div class="stepper">
+              <div class="step">
+                <!-- <div class="step-icon"></div> -->
+                <div class="card" data-bs-toggle="modal"  data-bs-target="#exampleModal6" style="width: 18rem; background-color: #fff3e0;">
+             
+                  <div class="card-body">
+                    <div class="step-title" value="4">Today's Wellness Tip <span id="todaywellnesstip"></span></div>
+                  </div>
+                </div>
+               
+                <!-- Today's Wellness Tip Start -->
+
+
+                <div class="modal fade"
+                
+                style=""
+                id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabe" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Today's Wellness Tip</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="todaysWellNessIndexModal()" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+  
+  
+                        <div class="card" style="width: auto;">
+                         
+                          <div class="card-body">
+                            <img src="../Images/today-wellness-tip.jpg" height="200"
+                            widht="200"/>
+                          </div>
+                        </div>
+  
+                      
+                     
+                      </div>
+                    
+                    </div>
+                  </div>
+                </div>
+
+
+ <!-- Today's Wellness Tip End -->
+              </div>
+              <div class="step">
+                <!-- <div class="step-icon"></div> -->
+
+                <div class="card" data-bs-toggle="modal"  data-bs-target="#exampleModal7" style="width: 18rem; background-color: #fff3e0;">
+             
+                  <div class="card-body">
+                    <div class="step-title" value="5">Today's Afternoon Meditation <span id="todayafternoonmeditation"></span></div>
+                  </div>
+                </div>
+              
+
+                <!-- Today's Afternoon Meditation Start -->
+                <div class="modal fade"
+                
+                style=""
+                id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabe" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Today's Afternoon Meditation</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="todaysAfternoonMeditationModal()" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+  
+  
+                        <div class="card" style="width: auto;">
+                         
+                          <div class="card-body">
+                            <img src="../Images/today's-meditation.jpg" height="200"
+                            widht="500"/>
+                          </div>
+                        </div>
+  
+                      
+                     
+                      </div>
+                    
+                    </div>
+                  </div>
+                </div>
+                <!-- Today's Afternoon Meditation End -->
+
+
+              </div>
+           
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-3" style="width: 24rem;">
+         
+          <div class="card-body">
+            <h4>Your Night Routines</h4>
+            <div class="stepper">
+              <div class="step">
+                <!-- <div class="step-icon"></div> -->
+
+                <div class="card" data-bs-toggle="modal"  data-bs-target="#exampleModal8" style="width: 18rem; background-color: #fff3e0;">
+             
+                  <div class="card-body">
+                    <div class="step-title" value="6">Your today's thoughts <span id="yourtodaythougth"></span></div>
+                  </div>
+                </div>
+               
+
+                <!-- Your Today's Thoughts Modal Start -->
+                <div class="modal fade"
+                
+                style=""
+                id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabe" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Your Today's Thoughts <span id="abcdefghij"></span></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"  aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+  
+  
+                        <div class="card" style="width: auto;">
+                         
+                          <div class="card-body">
+                            <div class="mb-3">
+                              <label for="message-text" class="col-form-label">Message:</label>
+                              <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="modal-footer">
+                         
+                          <button type="button" class="btn btn-primary" onclick="todaysThoughtsModal()">Submit</button>
+                        </div>
+                     
+                      </div>
+                    
+                    </div>
+                  </div>
+                </div>
+
+ <!-- Your Today's Thoughts Modal End -->
+
+              </div>
+              <div class="step">
+                <!-- <div class="step-icon"></div> -->
+                <div class="card" data-bs-toggle="modal"  data-bs-target="#exampleModal9" style="width: 18rem; background-color: #fff3e0;">
+             
+                  <div class="card-body">
+                    <div class="step-title" value="7">What you want to do tomorrow <span id="wanttodotomorrow"></span></div>
+                  </div>
+                </div>
+
+                <!-- What you want to do tomorrow Modal Start -->
+                <div class="modal fade"
+                
+                style=""
+                id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabe" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Your Tomorrow's Thoughts</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+  
+  
+                        <div class="card" style="width: auto;">
+                         
+                          <div class="card-body">
+                            <div class="mb-3">
+                              <label for="message-text" class="col-form-label">Message:</label>
+                              <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="modal-footer">
+                         
+                          <button type="button" class="btn btn-primary" onclick="tomorrowThoughtSubmit()">Submit</button>
+                        </div>
+                     
+                      </div>
+                    
+                    </div>
+                  </div>
+                </div>
+                <!-- What you want to do tomorrow Modal End -->
+               
+              </div>
+             
+             
+            </div>
+          </div>
+        </div>
+        
+
+     
+     
+
+      </div>
+    </div>
+  
+
+  </body>
+</html>
